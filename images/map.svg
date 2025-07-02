@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#F0F8FF"/>
+  
+  <!-- Рамка карты -->
+  <rect x="10" y="10" width="180" height="180" fill="white" stroke="#000" stroke-width="2"/>
+  
+  <!-- Сетка участков -->
+  <g stroke="#CCCCCC" stroke-width="1">
+    <!-- Вертикальные линии -->
+    <line x1="40" y1="10" x2="40" y2="190"/>
+    <line x1="70" y1="10" x2="70" y2="190"/>
+    <line x1="100" y1="10" x2="100" y2="190"/>
+    <line x1="130" y1="10" x2="130" y2="190"/>
+    <line x1="160" y1="10" x2="160" y2="190"/>
+    
+    <!-- Горизонтальные линии -->
+    <line x1="10" y1="40" x2="190" y2="40"/>
+    <line x1="10" y1="70" x2="190" y2="70"/>
+    <line x1="10" y1="100" x2="190" y2="100"/>
+    <line x1="10" y1="130" x2="190" y2="130"/>
+    <line x1="10" y1="160" x2="190" y2="160"/>
+  </g>
+  
+  <!-- Номера участков -->
+  <g font-family="Arial" font-size="8" text-anchor="middle" fill="#2F4F4F">
+    <text x="25" y="30">1</text>
+    <text x="55" y="30">2</text>
+    <text x="85" y="30">3</text>
+    <text x="115" y="30">4</text>
+    <text x="145" y="30">5</text>
+    <text x="175" y="30">6</text>
+    
+    <text x="25" y="60">7</text>
+    <text x="55" y="60">8</text>
+    <text x="85" y="60">9</text>
+    <text x="115" y="60">10</text>
+    <text x="145" y="60">11</text>
+    <text x="175" y="60">12</text>
+    
+    <text x="25" y="90">13</text>
+    <text x="55" y="90">14</text>
+    <text x="85" y="90">15</text>
+    <text x="115" y="90">16</text>
+    <text x="145" y="90">17</text>
+    <text x="175" y="90">18</text>
+  </g>
+  
+  <!-- Главные дорожки -->
+  <g fill="#D2B48C">
+    <!-- Центральная аллея -->
+    <rect x="95" y="10" width="10" height="180"/>
+    <!-- Горизонтальная дорожка -->
+    <rect x="10" y="95" width="180" height="10"/>
+  </g>
+  
+  <!-- Храм -->
+  <g transform="translate(90, 120)">
+    <rect x="0" y="0" width="20" height="15" fill="#DEB887"/>
+    <ellipse cx="10" cy="0" rx="8" ry="5" fill="#FFD700"/>
+    <rect x="8" y="-5" width="2" height="8" fill="#8B4513"/>
+    <rect x="6" y="-2" width="8" height="2" fill="#8B4513"/>
+  </g>
+  
+  <!-- Администрация -->
+  <g transform="translate(20, 120)">
+    <rect x="0" y="0" width="15" height="12" fill="#F5F5DC"/>
+    <polygon points="0,0 7.5,-5 15,0" fill="#8B4513"/>
+    <rect x="5" y="4" width="2" height="3" fill="#4169E1"/>
+    <rect x="8" y="4" width="2" height="3" fill="#4169E1"/>
+  </g>
+  
+  <!-- Колумбарий -->
+  <g transform="translate(140, 50)">
+    <rect x="0" y="0" width="20" height="15" fill="#D3D3D3"/>
+    <g stroke="#696969" stroke-width="0.5" fill="white">
+      <rect x="2" y="2" width="4" height="3"/>
+      <rect x="7" y="2" width="4" height="3"/>
+      <rect x="12" y="2" width="4" height="3"/>
+      <rect x="2" y="6" width="4" height="3"/>
+      <rect x="7" y="6" width="4" height="3"/>
+      <rect x="12" y="6" width="4" height="3"/>
+    </g>
+  </g>
+  
+  <!-- Ворота входа -->
+  <g transform="translate(95, 5)">
+    <rect x="0" y="0" width="3" height="8" fill="#8B4513"/>
+    <rect x="7" y="0" width="3" height="8" fill="#8B4513"/>
+    <rect x="3" y="0" width="4" height="2" fill="#8B4513"/>
+  </g>
+  
+  <!-- Легенда -->
+  <g transform="translate(15, 170)">
+    <rect x="0" y="0" width="60" height="15" fill="white" stroke="#000" stroke-width="1"/>
+    <text x="2" y="10" font-family="Arial" font-size="6" fill="#000">ЛЕГЕНДА:</text>
+    
+    <rect x="2" y="12" width="5" height="3" fill="#DEB887"/>
+    <text x="9" y="15" font-family="Arial" font-size="5" fill="#000">Храм</text>
+    
+    <rect x="30" y="12" width="5" height="3" fill="#F5F5DC"/>
+    <text x="37" y="15" font-family="Arial" font-size="5" fill="#000">Админ</text>
+  </g>
+  
+  <!-- Роза ветров -->
+  <g transform="translate(170, 25)">
+    <circle cx="0" cy="0" r="8" fill="white" stroke="#000" stroke-width="1"/>
+    <polygon points="0,-6 2,-2 0,-3 -2,-2" fill="#000"/>
+    <text x="0" y="-10" font-family="Arial" font-size="6" text-anchor="middle" fill="#000">С</text>
+  </g>
+  
+  <!-- Масштаб -->
+  <g transform="translate(15, 150)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#000" stroke-width="1"/>
+    <line x1="0" y1="-2" x2="0" y2="2" stroke="#000" stroke-width="1"/>
+    <line x1="20" y1="-2" x2="20" y2="2" stroke="#000" stroke-width="1"/>
+    <text x="10" y="-5" font-family="Arial" font-size="6" text-anchor="middle" fill="#000">100м</text>
+  </g>
+</svg> 

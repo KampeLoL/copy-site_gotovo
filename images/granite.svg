@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#F5F5F5"/>
+  
+  <!-- Пол мастерской -->
+  <rect y="150" width="200" height="50" fill="#C0C0C0"/>
+  
+  <!-- Большой памятник -->
+  <g transform="translate(50, 80)">
+    <!-- Основание -->
+    <rect x="10" y="50" width="30" height="15" fill="#2F4F4F"/>
+    <!-- Столб -->
+    <rect x="15" y="20" width="20" height="50" fill="#696969"/>
+    <!-- Венец -->
+    <rect x="10" y="15" width="30" height="10" fill="#2F4F4F"/>
+    <!-- Крест -->
+    <rect x="23" y="5" width="4" height="15" fill="#2F4F4F"/>
+    <rect x="18" y="8" width="14" height="4" fill="#2F4F4F"/>
+  </g>
+  
+  <!-- Средний памятник -->
+  <g transform="translate(110, 90)">
+    <!-- Основание -->
+    <rect x="5" y="40" width="25" height="12" fill="#696969"/>
+    <!-- Столб -->
+    <rect x="10" y="15" width="15" height="40" fill="#A9A9A9"/>
+    <!-- Сфера наверху -->
+    <circle cx="17.5" cy="15" r="8" fill="#696969"/>
+  </g>
+  
+  <!-- Малый памятник -->
+  <g transform="translate(160, 110)">
+    <!-- Основание -->
+    <rect x="0" y="25" width="20" height="10" fill="#2F4F4F"/>
+    <!-- Столб -->
+    <rect x="5" y="10" width="10" height="25" fill="#696969"/>
+    <!-- Треугольный верх -->
+    <polygon points="10,10 5,5 15,5" fill="#2F4F4F"/>
+  </g>
+  
+  <!-- Станок для обработки -->
+  <g transform="translate(20, 120)">
+    <!-- Основание станка -->
+    <rect x="0" y="20" width="40" height="10" fill="#4682B4"/>
+    <!-- Столешница -->
+    <rect x="5" y="15" width="30" height="8" fill="#87CEEB"/>
+    <!-- Заготовка -->
+    <rect x="10" y="10" width="8" height="8" fill="#696969"/>
+    <!-- Инструмент -->
+    <rect x="20" y="8" width="2" height="12" fill="#8B4513"/>
+  </g>
+  
+  <!-- Молоток -->
+  <g transform="translate(140, 140)">
+    <!-- Рукоятка -->
+    <rect x="0" y="5" width="20" height="3" fill="#8B4513"/>
+    <!-- Головка -->
+    <rect x="18" y="0" width="8" height="13" fill="#C0C0C0"/>
+  </g>
+  
+  <!-- Долото -->
+  <g transform="translate(170, 140)">
+    <!-- Рукоятка -->
+    <rect x="0" y="8" width="15" height="3" fill="#8B4513"/>
+    <!-- Лезвие -->
+    <polygon points="15,8 20,6 20,13 15,11" fill="#C0C0C0"/>
+  </g>
+  
+  <!-- Сверла -->
+  <g transform="translate(80, 140)">
+    <rect x="0" y="10" width="2" height="15" fill="#C0C0C0"/>
+    <rect x="4" y="8" width="2" height="17" fill="#C0C0C0"/>
+    <rect x="8" y="12" width="2" height="13" fill="#C0C0C0"/>
+  </g>
+  
+  <!-- Шлифовальный круг -->
+  <g transform="translate(100, 135)">
+    <circle cx="12" cy="12" r="12" fill="#696969" stroke="#2F4F4F" stroke-width="2"/>
+    <circle cx="12" cy="12" r="3" fill="#000"/>
+  </g>
+  
+  <!-- Образцы гранита -->
+  <g transform="translate(10, 40)">
+    <!-- Красный гранит -->
+    <rect x="0" y="0" width="15" height="20" fill="#8B0000"/>
+    <!-- Черный гранит -->
+    <rect x="20" y="0" width="15" height="20" fill="#2F2F2F"/>
+    <!-- Серый гранит -->
+    <rect x="0" y="25" width="15" height="20" fill="#696969"/>
+    <!-- Розовый гранит -->
+    <rect x="20" y="25" width="15" height="20" fill="#BC8F8F"/>
+  </g>
+  
+  <!-- Надпись на стене -->
+  <text x="100" y="30" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2F4F4F">ГРАНИТНАЯ МАСТЕРСКАЯ</text>
+  
+  <!-- Искры от работы -->
+  <g fill="#FFD700" opacity="0.8">
+    <circle cx="28" cy="125" r="1"/>
+    <circle cx="32" cy="122" r="0.5"/>
+    <circle cx="35" cy="128" r="1"/>
+    <circle cx="25" cy="130" r="0.5"/>
+  </g>
+</svg> 

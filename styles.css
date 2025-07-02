@@ -117,13 +117,17 @@ header {
 
 /* Hero секция */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23f0f0f0" width="1000" height="600"/><text x="500" y="300" font-family="Arial" font-size="24" fill="%23999" text-anchor="middle" dy=".3em">Ваганьковское кладбище</text></svg>');
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7)), 
+                url('images/hero-background.svg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: white;
     padding: 4rem 0;
     text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .hero h1 {
@@ -191,24 +195,22 @@ header {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.link-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.link-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #3498db, #2ecc71);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
     margin: 0 auto 1rem auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
 }
 
-.link-item:hover .link-icon {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+.link-item:hover .link-image {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-color: #3498db;
 }
 
 .link-item span {
@@ -283,6 +285,35 @@ header {
 
 .content-section:nth-child(even) {
     background: #f8f9fa;
+}
+
+/* Секции с изображениями */
+.section-with-image {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.section-text {
+    flex: 2;
+}
+
+.section-image {
+    flex: 1;
+    text-align: center;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-image img:hover {
+    transform: scale(1.05);
 }
 
 .services-list {
@@ -429,6 +460,19 @@ footer {
         box-shadow: none;
         background: rgba(255,255,255,0.1);
         margin-top: 0.5rem;
+    }
+    
+    .section-with-image {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .section-image {
+        order: -1;
+    }
+    
+    .section-image img {
+        max-width: 200px;
     }
 }
 

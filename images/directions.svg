@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#E6F3FF"/>
+  
+  <!-- Дорога -->
+  <rect x="0" y="140" width="200" height="40" fill="#696969"/>
+  <rect x="0" y="158" width="200" height="4" fill="#FFFF00" stroke-dasharray="10,5"/>
+  
+  <!-- Автобус -->
+  <g transform="translate(30, 110)">
+    <rect x="0" y="0" width="80" height="40" rx="5" fill="#FF6347" stroke="#000" stroke-width="1"/>
+    <!-- Окна -->
+    <rect x="10" y="8" width="15" height="12" fill="#87CEEB"/>
+    <rect x="30" y="8" width="15" height="12" fill="#87CEEB"/>
+    <rect x="50" y="8" width="15" height="12" fill="#87CEEB"/>
+    <!-- Колеса -->
+    <circle cx="15" cy="45" r="8" fill="#000"/>
+    <circle cx="65" cy="45" r="8" fill="#000"/>
+    <!-- Номер -->
+    <rect x="25" y="25" width="30" height="10" fill="#FFFFFF"/>
+    <text x="40" y="32" font-family="Arial" font-size="8" text-anchor="middle" fill="#000">123</text>
+  </g>
+  
+  <!-- Метро -->
+  <g transform="translate(120, 50)">
+    <circle cx="25" cy="25" r="25" fill="#FF0000"/>
+    <circle cx="25" cy="25" r="18" fill="#FFFFFF"/>
+    <text x="25" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#FF0000">M</text>
+  </g>
+  
+  <!-- Указатели -->
+  <g transform="translate(20, 20)">
+    <polygon points="0,10 20,10 25,15 20,20 0,20" fill="#4169E1"/>
+    <text x="10" y="16" font-family="Arial" font-size="8" text-anchor="middle" fill="#FFFFFF">Сокол</text>
+  </g>
+  
+  <g transform="translate(130, 20)">
+    <polygon points="0,10 30,10 35,15 30,20 0,20" fill="#4169E1"/>
+    <text x="15" y="16" font-family="Arial" font-size="8" text-anchor="middle" fill="#FFFFFF">Войковская</text>
+  </g>
+  
+  <!-- Пешеход -->
+  <g transform="translate(160, 125)">
+    <circle cx="8" cy="8" r="4" fill="#FFB6C1"/>
+    <rect x="6" y="12" width="4" height="12" fill="#4169E1"/>
+    <rect x="4" y="24" width="3" height="8" fill="#4169E1"/>
+    <rect x="9" y="24" width="3" height="8" fill="#4169E1"/>
+  </g>
+  
+  <!-- Расстояние -->
+  <text x="100" y="190" font-family="Arial" font-size="12" text-anchor="middle" fill="#000">2 км до кладбища</text>
+</svg> 

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#E6F3FF"/>
+  
+  <!-- Телефон -->
+  <g transform="translate(30, 40)">
+    <!-- Корпус телефона -->
+    <rect x="0" y="0" width="25" height="40" rx="3" fill="#2F4F4F" stroke="#000" stroke-width="1"/>
+    <!-- Экран -->
+    <rect x="3" y="8" width="19" height="24" fill="#4169E1"/>
+    <!-- Кнопки -->
+    <circle cx="12.5" cy="35" r="2" fill="#C0C0C0"/>
+    <!-- Антенна -->
+    <rect x="11" y="-5" width="2" height="8" fill="#2F4F4F"/>
+  </g>
+  
+  <!-- Конверт/почта -->
+  <g transform="translate(80, 50)">
+    <!-- Основа конверта -->
+    <rect x="0" y="0" width="35" height="25" fill="white" stroke="#4169E1" stroke-width="1"/>
+    <!-- Треугольник письма -->
+    <polygon points="0,0 17.5,15 35,0" fill="#4169E1" opacity="0.3"/>
+    <!-- Линии письма -->
+    <line x1="17.5" y1="0" x2="17.5" y2="15" stroke="#4169E1" stroke-width="1"/>
+  </g>
+  
+  <!-- Часы (режим работы) -->
+  <g transform="translate(140, 45)">
+    <!-- Циферблат -->
+    <circle cx="15" cy="15" r="15" fill="white" stroke="#2F4F4F" stroke-width="2"/>
+    <!-- Стрелки -->
+    <line x1="15" y1="15" x2="15" y2="8" stroke="#000" stroke-width="2"/>
+    <line x1="15" y1="15" x2="20" y2="15" stroke="#000" stroke-width="1"/>
+    <!-- Цифры -->
+    <text x="15" y="6" font-family="Arial" font-size="6" text-anchor="middle" fill="#000">12</text>
+    <text x="25" y="18" font-family="Arial" font-size="6" text-anchor="middle" fill="#000">3</text>
+    <text x="15" y="27" font-family="Arial" font-size="6" text-anchor="middle" fill="#000">6</text>
+    <text x="7" y="18" font-family="Arial" font-size="6" text-anchor="middle" fill="#000">9</text>
+  </g>
+  
+  <!-- Адресная табличка -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="120" height="40" fill="white" stroke="#4169E1" stroke-width="2"/>
+    <text x="60" y="15" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#2F4F4F">г. Москва</text>
+    <text x="60" y="25" font-family="Arial" font-size="8" text-anchor="middle" fill="#2F4F4F">ул. Сергея Макеева, 15</text>
+    <text x="60" y="35" font-family="Arial" font-size="8" text-anchor="middle" fill="#2F4F4F">123100</text>
+  </g>
+  
+  <!-- Карта (схематично) -->
+  <g transform="translate(20, 150)">
+    <rect x="0" y="0" width="50" height="35" fill="#90EE90" stroke="#228B22" stroke-width="1"/>
+    <!-- Дороги -->
+    <rect x="20" y="0" width="3" height="35" fill="#696969"/>
+    <rect x="0" y="15" width="50" height="3" fill="#696969"/>
+    <!-- Точка места -->
+    <circle cx="25" cy="20" r="3" fill="#FF0000"/>
+    <text x="25" y="24" font-family="Arial" font-size="6" text-anchor="middle" fill="white">●</text>
+  </g>
+  
+  <!-- Автобус (схематично) -->
+  <g transform="translate(90, 155)">
+    <rect x="0" y="0" width="25" height="15" rx="2" fill="#FF6347"/>
+    <circle cx="5" cy="18" r="3" fill="#000"/>
+    <circle cx="20" cy="18" r="3" fill="#000"/>
+    <rect x="3" y="3" width="5" height="4" fill="#87CEEB"/>
+    <rect x="10" y="3" width="5" height="4" fill="#87CEEB"/>
+    <rect x="17" y="3" width="5" height="4" fill="#87CEEB"/>
+  </g>
+  
+  <!-- Метро -->
+  <g transform="translate(130, 150)">
+    <circle cx="12" cy="12" r="12" fill="#FF0000"/>
+    <circle cx="12" cy="12" r="8" fill="white"/>
+    <text x="12" y="16" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#FF0000">М</text>
+  </g>
+  
+  <!-- Указатель направления -->
+  <g transform="translate(160, 180)">
+    <polygon points="0,5 10,5 15,10 10,15 0,15" fill="#4169E1"/>
+    <text x="7" y="11" font-family="Arial" font-size="6" text-anchor="middle" fill="white">→</text>
+  </g>
+  
+  <!-- Информационная строка -->
+  <text x="100" y="20" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2F4F4F">КОНТАКТНАЯ ИНФОРМАЦИЯ</text>
+  
+  <!-- Режим работы внизу -->
+  <g transform="translate(20, 180)">
+    <text x="0" y="8" font-family="Arial" font-size="8" fill="#2F4F4F">Режим работы:</text>
+    <text x="0" y="16" font-family="Arial" font-size="7" fill="#2F4F4F">Май-окт: 9:00-19:00</text>
+    <text x="80" y="16" font-family="Arial" font-size="7" fill="#2F4F4F">Окт-апр: 9:00-17:00</text>
+  </g>
+</svg> 

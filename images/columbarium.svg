@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#F0F8FF"/>
+  
+  <!-- Стена колумбария -->
+  <rect x="20" y="40" width="160" height="120" fill="#D3D3D3" stroke="#A9A9A9" stroke-width="2"/>
+  
+  <!-- Ниши (3x4) -->
+  <g stroke="#696969" stroke-width="1" fill="#FFFFFF">
+    <!-- Первый ряд -->
+    <rect x="35" y="55" width="30" height="20"/>
+    <rect x="75" y="55" width="30" height="20"/>
+    <rect x="115" y="55" width="30" height="20"/>
+    <rect x="155" y="55" width="20" height="20"/>
+    
+    <!-- Второй ряд -->
+    <rect x="35" y="85" width="30" height="20"/>
+    <rect x="75" y="85" width="30" height="20"/>
+    <rect x="115" y="85" width="30" height="20"/>
+    <rect x="155" y="85" width="20" height="20"/>
+    
+    <!-- Третий ряд -->
+    <rect x="35" y="115" width="30" height="20"/>
+    <rect x="75" y="115" width="30" height="20"/>
+    <rect x="115" y="115" width="30" height="20"/>
+    <rect x="155" y="115" width="20" height="20"/>
+    
+    <!-- Четвертый ряд -->
+    <rect x="35" y="145" width="30" height="20"/>
+    <rect x="75" y="145" width="30" height="20"/>
+    <rect x="115" y="145" width="30" height="20"/>
+    <rect x="155" y="145" width="20" height="20"/>
+  </g>
+  
+  <!-- Урны в некоторых нишах -->
+  <g fill="#8B4513">
+    <ellipse cx="50" cy="65" rx="8" ry="6"/>
+    <ellipse cx="90" cy="65" rx="8" ry="6"/>
+    <ellipse cx="50" cy="95" rx="8" ry="6"/>
+    <ellipse cx="130" cy="95" rx="8" ry="6"/>
+    <ellipse cx="90" cy="125" rx="8" ry="6"/>
+    <ellipse cx="165" cy="125" rx="6" ry="6"/>
+  </g>
+  
+  <!-- Таблички с именами -->
+  <g fill="#FFD700" stroke="#B8860B" stroke-width="0.5">
+    <rect x="40" y="70" width="20" height="4"/>
+    <rect x="80" y="70" width="20" height="4"/>
+    <rect x="40" y="100" width="20" height="4"/>
+    <rect x="120" y="100" width="20" height="4"/>
+  </g>
+  
+  <!-- Цветы -->
+  <g transform="translate(25, 170)">
+    <rect x="0" y="5" width="2" height="10" fill="#228B22"/>
+    <circle cx="1" cy="5" r="3" fill="#FFB6C1"/>
+    
+    <rect x="10" y="3" width="2" height="12" fill="#228B22"/>
+    <circle cx="11" cy="3" r="4" fill="#FF69B4"/>
+  </g>
+  
+  <!-- Надпись -->
+  <text x="100" y="25" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2F4F4F">КОЛУМБАРИЙ</text>
+</svg> 
