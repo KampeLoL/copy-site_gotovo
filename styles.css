@@ -512,3 +512,522 @@ html {
 .comments-section {
     display: block;
 } 
+
+/* ===== НОВЫЕ СТИЛИ ДЛЯ ПРИВЛЕЧЕНИЯ ЛИДОВ ===== */
+
+/* CTA кнопки */
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.cta-button.primary:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.cta-button.secondary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.cta-button.small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.cta-button.full-width {
+    width: 100%;
+}
+
+/* Hero CTA */
+.hero-cta {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Специальные предложения */
+.special-offers {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 4rem 0;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.offer-card.featured {
+    border-color: #e74c3c;
+    background: linear-gradient(135deg, #fff, #fdf2f2);
+}
+
+.offer-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.offer-badge.discount {
+    background: #27ae60;
+}
+
+.offer-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.offer-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.offer-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 1.5rem;
+}
+
+/* Калькулятор стоимости */
+.cost-calculator {
+    background: white;
+    padding: 4rem 0;
+}
+
+.calculator-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculator-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.calculator-result {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.estimated-cost {
+    margin-bottom: 1rem;
+}
+
+.estimated-cost span {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.estimated-cost strong {
+    display: block;
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-top: 0.5rem;
+}
+
+/* Отзывы клиентов */
+.reviews-section {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 4rem 0;
+    color: white;
+}
+
+.reviews-section h2 {
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+}
+
+.review-rating {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.review-author {
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.reviews-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Быстрая связь */
+.quick-contact {
+    background: #2c3e50;
+    padding: 2rem 0;
+}
+
+.contact-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-text {
+    flex: 1;
+    color: white;
+}
+
+.contact-text h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.contact-text p {
+    opacity: 0.9;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn.phone {
+    background: #27ae60;
+    color: white;
+}
+
+.contact-btn.phone:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+.contact-btn.callback {
+    background: #3498db;
+    color: white;
+}
+
+.contact-btn.callback:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Модальные окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideInUp 0.3s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    z-index: 1;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+#modal-body {
+    padding: 2rem;
+}
+
+.contact-form h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.contact-form p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.form-group.checkbox input {
+    width: auto;
+    margin: 0;
+}
+
+.form-group.checkbox label {
+    font-weight: normal;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.rating-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rating-input input {
+    display: none;
+}
+
+.rating-input label {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.rating-input label:hover,
+.rating-input input:checked + label {
+    background: #3498db;
+    color: white;
+}
+
+/* Всплывающий виджет */
+.floating-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.widget-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 280px;
+}
+
+.widget-header {
+    background: #3498db;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.widget-body {
+    padding: 1rem;
+}
+
+.widget-body p {
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Адаптивность для новых элементов */
+@media (max-width: 768px) {
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-buttons {
+        justify-content: center;
+    }
+    
+    .floating-widget {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .widget-content {
+        width: 250px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+}
