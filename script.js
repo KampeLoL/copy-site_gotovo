@@ -579,4 +579,439 @@ window.openModal = openModal;
 window.closeModal = closeModal;
 window.submitForm = submitForm;
 window.updateCalculator = updateCalculator;
-window.closeFloatingWidget = closeFloatingWidget; 
+window.closeFloatingWidget = closeFloatingWidget;
+
+// Загрузчик страницы
+window.addEventListener('load', () => {
+    const loader = document.createElement('div');
+    loader.className = 'loader';
+    loader.innerHTML = `
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+        </div>
+    `;
+    document.body.appendChild(loader);
+    
+    setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.remove();
+        }, 300);
+    }, 1000);
+});
+
+// Навигация
+const navbar = document.querySelector('.navbar');
+const navMenu = document.querySelector('.nav-menu');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Обработчик прокрутки для навигации
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Мобильное меню
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navToggle.classList.toggle('active');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+    });
+});
+
+// Плавная прокрутка
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = 80;
+            const targetPosition = target.offsetTop - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Анимация чисел в статистике
+const animateNumbers = () => {
+    const numbers = document.querySelectorAll('.stat-number');
+    
+    numbers.forEach(number => {
+        const target = parseInt(number.getAttribute('data-target'));
+        const increment = target / 50;
+        let current = 0;
+        
+        const updateNumber = () => {
+            if (current < target) {
+                current += increment;
+                number.textContent = Math.ceil(current);
+                requestAnimationFrame(updateNumber);
+            } else {
+                number.textContent = target;
+            }
+        };
+        
+        updateNumber();
+    });
+};
+
+// Intersection Observer для анимаций при прокрутке
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            
+            // Анимация чисел при появлении hero секции
+            if (entry.target.classList.contains('hero')) {
+                animateNumbers();
+            }
+        }
+    });
+}, observerOptions);
+
+// Добавляем элементы для наблюдения
+document.querySelectorAll('.feature-card, .service-item, .portfolio-item').forEach(el => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+});
+
+// Наблюдение за hero секцией для анимации чисел
+const heroSection = document.querySelector('.hero');
+observer.observe(heroSection);
+
+// Анимация feature карточек при наведении
+const featureCards = document.querySelectorAll('.feature-card');
+featureCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) rotateX(5deg)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) rotateX(0)';
+    });
+});
+
+// Параллакс эффект для hero фигур
+window.addEventListener('mousemove', (e) => {
+    const shapes = document.querySelectorAll('.hero-shape-1, .hero-shape-2, .hero-shape-3');
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+    
+    shapes.forEach((shape, index) => {
+        const speed = (index + 1) * 20;
+        const xPos = (x - 0.5) * speed;
+        const yPos = (y - 0.5) * speed;
+        shape.style.transform = `translate(${xPos}px, ${yPos}px)`;
+    });
+});
+
+// Обработка формы контактов
+const contactForm = document.querySelector('.contact-form');
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Получаем данные формы
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    // Показываем уведомление
+    showNotification('Спасибо! Мы свяжемся с вами в ближайшее время.', 'success');
+    
+    // Очищаем форму
+    contactForm.reset();
+});
+
+// Обработка формы подписки
+const newsletterForm = document.querySelector('.newsletter-form');
+newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = newsletterForm.querySelector('input[type="email"]').value;
+    
+    showNotification('Вы успешно подписались на рассылку!', 'success');
+    newsletterForm.reset();
+});
+
+// Функция показа уведомлений
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-info-circle'}"></i>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    // Стили для уведомления
+    const style = document.createElement('style');
+    style.textContent = `
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+            animation: slideInRight 0.3s ease;
+        }
+        
+        .notification.success {
+            border-left: 4px solid #10b981;
+        }
+        
+        .notification.info {
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .notification i {
+            font-size: 1.5rem;
+        }
+        
+        .notification.success i {
+            color: #10b981;
+        }
+        
+        .notification.info i {
+            color: #3b82f6;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    `;
+    
+    document.head.appendChild(style);
+    document.body.appendChild(notification);
+    
+    // Удаляем уведомление через 3 секунды
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
+
+// Добавляем CSS для анимации выхода
+const additionalStyles = document.createElement('style');
+additionalStyles.textContent = `
+    @keyframes slideOutRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(additionalStyles);
+
+// Динамическое изменение цвета навигации при прокрутке разных секций
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').slice(1) === current) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// Анимация печатания для заголовка
+const heroTitle = document.querySelector('.hero-title');
+const originalText = heroTitle.innerHTML;
+heroTitle.innerHTML = '';
+
+function typeWriter(element, html, index = 0) {
+    if (index < html.length) {
+        if (html[index] === '<') {
+            const tagEnd = html.indexOf('>', index);
+            element.innerHTML += html.substring(index, tagEnd + 1);
+            index = tagEnd + 1;
+        } else {
+            element.innerHTML += html[index];
+            index++;
+        }
+        setTimeout(() => typeWriter(element, html, index), 30);
+    }
+}
+
+// Запускаем анимацию печатания после загрузки
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        typeWriter(heroTitle, originalText);
+    }, 1500);
+});
+
+// Эффект частиц для hero секции
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Случайные свойства
+    const size = Math.random() * 5 + 2;
+    const duration = Math.random() * 3 + 2;
+    const delay = Math.random() * 2;
+    const startX = Math.random() * window.innerWidth;
+    
+    particle.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        background: rgba(99, 102, 241, 0.5);
+        border-radius: 50%;
+        left: ${startX}px;
+        bottom: -10px;
+        animation: floatUp ${duration}s ease-in ${delay}s;
+        z-index: 0;
+    `;
+    
+    document.querySelector('.hero').appendChild(particle);
+    
+    // Удаляем частицу после анимации
+    setTimeout(() => {
+        particle.remove();
+    }, (duration + delay) * 1000);
+}
+
+// Создаем частицы периодически
+setInterval(createParticle, 300);
+
+// Добавляем CSS для анимации частиц
+const particleStyles = document.createElement('style');
+particleStyles.textContent = `
+    @keyframes floatUp {
+        0% {
+            opacity: 0;
+            transform: translateY(0) scale(0);
+        }
+        10% {
+            opacity: 1;
+            transform: translateY(-20px) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-100vh) scale(0.5);
+        }
+    }
+    
+    .nav-link.active {
+        color: var(--primary-color);
+    }
+    
+    .nav-link.active::after {
+        width: 100%;
+    }
+`;
+document.head.appendChild(particleStyles);
+
+// Lazy loading для изображений (подготовка для будущих изображений)
+const lazyImages = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+        }
+    });
+});
+
+lazyImages.forEach(img => imageObserver.observe(img));
+
+// Эффект ripple для кнопок
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            left: ${x}px;
+            top: ${y}px;
+            animation: rippleEffect 0.6s ease-out;
+            pointer-events: none;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+
+// CSS для ripple эффекта
+const rippleStyles = document.createElement('style');
+rippleStyles.textContent = `
+    @keyframes rippleEffect {
+        from {
+            transform: scale(0);
+            opacity: 1;
+        }
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(rippleStyles);
+
+console.log('TechFlow website initialized successfully!'); 
