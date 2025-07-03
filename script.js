@@ -579,4 +579,91 @@ window.openModal = openModal;
 window.closeModal = closeModal;
 window.submitForm = submitForm;
 window.updateCalculator = updateCalculator;
-window.closeFloatingWidget = closeFloatingWidget; 
+window.closeFloatingWidget = closeFloatingWidget;
+
+// ===== ModernSite Core Script =====
+
+// Helper: throttle func
+function throttle(fn, delay) {
+    let lastCall = 0;
+    return function (...args) {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            fn.apply(this, args);
+        }
+    };
+}
+
+// DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    /* ---------------- Burger Menu ---------------- */
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList  = document.querySelector('.nav-list');
+
+    if (navToggle && navList) {
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navList.classList.toggle('open');
+        });
+
+        // Close menu on nav link click (mobile)
+        navList.addEventListener('click', (e) => {
+            if (e.target.tagName.toLowerCase() === 'a' && window.innerWidth <= 768) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navList.classList.remove('open');
+            }
+        });
+
+        // Reset menu on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navList.classList.remove('open');
+            }
+        });
+    }
+
+    /* ---------------- Fade-up IntersectionObserver ---------------- */
+    const io = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    /* ---------------- Hero Parallax ---------------- */
+    const updateParallax = throttle(() => {
+        document.documentElement.style.setProperty('--scrollY', window.scrollY);
+    }, 15);
+
+    window.addEventListener('scroll', updateParallax);
+    updateParallax(); // initial call
+
+    /* ---------------- Dynamic Year in Footer ---------------- */
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    /* ---------------- Contact Form Validation ---------------- */
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            if (!form.checkValidity()) {
+                e.preventDefault();
+                form.reportValidity();
+            } else {
+                e.preventDefault();
+                // Simulate successful send (AJAX could be placed here)
+                alert('Спасибо! Ваше сообщение успешно отправлено.');
+                form.reset();
+            }
+        });
+    }
+}); 
