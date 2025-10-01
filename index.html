@@ -3,30 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваганьковское кладбище</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Ваганьковское кладбище в Москве - полный спектр услуг: памятники, колумбарий, благоустройство. AI-консультант поможет с выбором.">
+    <meta name="keywords" content="Ваганьковское кладбище, памятники, колумбарий, благоустройство, Москва">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ваганьковское кладбище - Услуги и консультации">
+    <meta property="og:description" content="Современный сайт Ваганьковского кладбища с AI-помощником и полным спектром услуг">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-background.svg">
+    
+    <!-- Preload критических ресурсов -->
+    <link rel="preload" href="images/hero-background.svg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Ваганьковское кладбище - Современные услуги с AI-помощником</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ваганьковское кладбище",
+        "description": "Услуги кладбища: памятники, колумбарий, благоустройство",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Сергея Макеева, 15",
+            "addressLocality": "Москва",
+            "postalCode": "123100",
+            "addressCountry": "RU"
+        },
+        "telephone": "+7 (495) 123-45-67",
+        "openingHours": [
+            "Mo-Su 09:00-19:00",
+            "Mo-Su 09:00-17:00"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Прогресс бар загрузки -->
+    <div class="progress-bar"></div>
+    
     <header>
         <div class="container">
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#administration">Администрация</a></li>
-                    <li><a href="#directions">Как доехать</a></li>
-                    <li><a href="#columbarium">Колумбарий</a></li>
-                    <li><a href="#temple">Храм</a></li>
+                    <li><a href="#administration">🏢 Администрация</a></li>
+                    <li><a href="#directions">🚌 Как доехать</a></li>
+                    <li><a href="#columbarium">🏛️ Колумбарий</a></li>
+                    <li><a href="#temple">⛪ Храм</a></li>
                     <li class="dropdown">
-                        <a href="#services">Услуги</a>
+                        <a href="#services">🛠️ Услуги</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#excursions">Экскурсии по Ваганьковскому кладбищу</a></li>
-                            <li><a href="#landscaping">Ваганьковское кладбище, благоустройство</a></li>
-                            <li><a href="#monuments">Памятники</a></li>
-                            <li><a href="#prices">Сколько стоит место ?</a></li>
+                            <li><a href="#excursions">🚶 Экскурсии по Ваганьковскому кладбищу</a></li>
+                            <li><a href="#landscaping">🌿 Ваганьковское кладбище, благоустройство</a></li>
+                            <li><a href="#monuments">🗿 Памятники</a></li>
+                            <li><a href="#prices">💰 Сколько стоит место ?</a></li>
                         </ul>
                     </li>
-                    <li><a href="#granite-workshop">Гранитная мастерская</a></li>
-                    <li><a href="#map">Схема участков</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#granite-workshop">⚒️ Гранитная мастерская</a></li>
+                    <li><a href="#map">🗺️ Схема участков</a></li>
+                    <li><a href="#contacts">📞 Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,77 +79,86 @@
 
     <main>
         <section class="hero">
+            <div class="particles"></div>
             <div class="container">
-                <h1>Ваганьковское кладбище</h1>
-                <div class="hero-info">
-                    <p><strong>г.Москва ул. Сергея Макеева, 15, Москва, 123100</strong></p>
-                    <div class="working-hours">
-                        <h3>Режим работы кладбища:</h3>
-                        <ul>
-                            <li><strong>с 9-19 ч</strong> май-октябрь</li>
-                            <li><strong>с 9-17 ч</strong> октябрь-апрель</li>
-                        </ul>
-                    </div>
-                    <div class="hero-cta">
-                        <button class="cta-button primary" onclick="openModal('consultation')">
-                            📞 Бесплатная консультация
-                        </button>
-                        <button class="cta-button secondary" onclick="openModal('calculator')">
-                            💰 Рассчитать стоимость
-                        </button>
+                <div class="hero-content">
+                    <h1>🌹 Ваганьковское кладбище</h1>
+                    <div class="hero-info">
+                        <p><strong>📍 г.Москва ул. Сергея Макеева, 15, Москва, 123100</strong></p>
+                        <div class="working-hours">
+                            <h3>⏰ Режим работы кладбища:</h3>
+                            <ul>
+                                <li><strong>🌞 с 9-19 ч</strong> май-октябрь</li>
+                                <li><strong>🌙 с 9-17 ч</strong> октябрь-апрель</li>
+                            </ul>
+                        </div>
+                        <div class="hero-cta">
+                            <button class="cta-button primary" onclick="openModal('consultation')">
+                                📞 Бесплатная консультация
+                            </button>
+                            <button class="cta-button secondary" onclick="openModal('calculator')">
+                                💰 Рассчитать стоимость
+                            </button>
+                            <button class="cta-button outline" onclick="window.aiChatbot?.open()">
+                                🤖 AI-Помощник
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="quick-links">
+        <section class="quick-links fade-in">
             <div class="container">
+                <h2>🎯 Быстрый доступ к услугам</h2>
                 <div class="links-grid">
-                    <a href="#administration" class="link-item">
-                        <img src="images/administration.svg" alt="Администрация" class="link-image">
+                    <a href="#administration" class="link-item slide-in-left">
+                        <img src="images/administration.svg" alt="Администрация" class="link-image" loading="lazy">
                         <span>Администрация</span>
                     </a>
-                    <a href="#directions" class="link-item">
-                        <img src="images/directions.svg" alt="Как доехать" class="link-image">
+                    <a href="#directions" class="link-item slide-in-left">
+                        <img src="images/directions.svg" alt="Как доехать" class="link-image" loading="lazy">
                         <span>Как доехать</span>
                     </a>
-                    <a href="#columbarium" class="link-item">
-                        <img src="images/columbarium.svg" alt="Колумбарий" class="link-image">
+                    <a href="#columbarium" class="link-item slide-in-right">
+                        <img src="images/columbarium.svg" alt="Колумбарий" class="link-image" loading="lazy">
                         <span>Колумбарий</span>
                     </a>
-                    <a href="#temple" class="link-item">
-                        <img src="images/temple.svg" alt="Храм" class="link-image">
+                    <a href="#temple" class="link-item slide-in-right">
+                        <img src="images/temple.svg" alt="Храм" class="link-image" loading="lazy">
                         <span>Храм</span>
                     </a>
-                    <a href="#services" class="link-item">
-                        <img src="images/services.svg" alt="Услуги" class="link-image">
+                    <a href="#services" class="link-item slide-in-left">
+                        <img src="images/services.svg" alt="Услуги" class="link-image" loading="lazy">
                         <span>Услуги</span>
                     </a>
-                    <a href="#granite-workshop" class="link-item">
-                        <img src="images/granite.svg" alt="Гранитная мастерская" class="link-image">
+                    <a href="#granite-workshop" class="link-item slide-in-right">
+                        <img src="images/granite.svg" alt="Гранитная мастерская" class="link-image" loading="lazy">
                         <span>Гранитная мастерская</span>
                     </a>
-                    <a href="#map" class="link-item">
-                        <img src="images/map.svg" alt="Схема участков" class="link-image">
+                    <a href="#map" class="link-item slide-in-left">
+                        <img src="images/map.svg" alt="Схема участков" class="link-image" loading="lazy">
                         <span>Схема участков</span>
                     </a>
-                    <a href="#contacts" class="link-item">
-                        <img src="images/contacts.svg" alt="Контакты" class="link-image">
+                    <a href="#contacts" class="link-item slide-in-right">
+                        <img src="images/contacts.svg" alt="Контакты" class="link-image" loading="lazy">
                         <span>Контакты</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="main-content">
+        <section class="main-content fade-in">
             <div class="container">
-                <h2>Ваганьковское кладбище</h2>
+                <h2>🏛️ Ваганьковское кладбище</h2>
                 
                 <div class="content-text">
-                    <p><strong>Ваганьковское кладбище</strong> в Москве (официальный сайт работает уже давно) – это старейший памятник культурного и исторического наследия. Здесь не только нашли последний приют известные личности и жертвы ВОВ, но и находятся настоящие произведения искусства, принадлежащие знаменитым скульпторам и архитекторам.</p>
+                    <p><strong>Ваганьковское кладбище</strong> в Москве – это старейший памятник культурного и исторического наследия. Здесь не только нашли последний приют известные личности и жертвы ВОВ, но и находятся настоящие произведения искусства, принадлежащие знаменитым скульпторам и архитекторам.</p>
+                    
+                    <p>🤖 <strong>Новинка!</strong> Теперь на нашем сайте доступен AI-помощник, который поможет вам с выбором услуг, расчетом стоимости и ответит на любые вопросы 24/7.</p>
                 </div>
 
-                <h3>Немного истории</h3>
+                <h3>📜 Немного истории</h3>
                 
                 <div class="content-text">
                     <p>Ваганьковское кладбище было основано в 1771 году. Распоряжение о его создании отдал граф Орлов. В те времена бушевала чума, в связи с чем особыми полномочиями его наделила императрица Екатерина II. И граф отдал земли под деревенькой Ваганьково для захоронения жертв эпидемии.</p>
@@ -113,15 +167,23 @@
                     
                     <p>Ситуация изменилась в начале 19 столетия, когда впервые сюда привезли для погребения известных личностей. Сегодня быть похороненным на Ваганьковском кладбище – очень престижно, но мало кто удостаивается такой чести.</p>
                     
-                    <p>Главная достопримечательность погоста – Храм Воскресения Словущего. Год его создания 1924, а архитектором был Григорьев. Храм построен на месте небольшой церквушки, от которой осталась только ротонда.</p>
+                    <p>⛪ Главная достопримечательность погоста – Храм Воскресения Словущего. Год его создания 1924, а архитектором был Григорьев. Храм построен на месте небольшой церквушки, от которой осталась только ротонда.</p>
                 </div>
 
-                <h3>Официальный сайт Ваганьковского кладбища</h3>
+                <h3>🌐 Современные технологии на службе памяти</h3>
                 
                 <div class="content-text">
                     <p>Сегодня на Ваганьковском кладбище нельзя проводить новые свободные захоронения. Зато можно помещать урны в колумбарий закрытого или открытого типа, а также проводить подзахоронения в семейные и родовые могилы. Исключение делается только для тех, кто имеет заслуги перед страной.</p>
                     
-                    <p>Администрация Ваганьковского кладбища ведет учет захоронений. Архив периодически обновляется и вычищается. Официальный сайт администрации содержит всю информацию об имеющихся здесь захоронениях, а также схемы участков и информацию о дополнительных услугах. Перейти на сайт можно по ссылке в интернете.</p>
+                    <p>Администрация Ваганьковского кладбища ведет учет захоронений. Архив периодически обновляется и вычищается. Наш современный сайт содержит всю информацию об имеющихся здесь захоронениях, а также схемы участков и информацию о дополнительных услугах.</p>
+                    
+                    <p>💡 <strong>Инновации:</strong> Мы внедрили AI-технологии для улучшения качества обслуживания. Наш умный помощник может:</p>
+                    <ul>
+                        <li>🎯 Подобрать оптимальные услуги под ваши потребности</li>
+                        <li>💰 Рассчитать точную стоимость работ</li>
+                        <li>📅 Помочь с планированием и записью на консультацию</li>
+                        <li>❓ Ответить на любые вопросы о процедурах и документах</li>
+                    </ul>
                     
                     <p>Благоустройство территории лежит полностью на плечах администрации, и она с этим справляется. Дополнительные услуги по прокату инвентаря и уборке могил обеспечивают круглогодично порядок на территории погоста.</p>
                     
@@ -130,199 +192,85 @@
             </div>
         </section>
 
-        <section class="comments-section">
-            <div class="container">
-                <h3>Обращения посетителей</h3>
-                <div class="comments">
-                    <div class="comment">
-                        <h4>Галина Арцт</h4>
-                        <p>Здравствуйте! Ищу могилу прадедушки Арцт Николая Федоровича на Ваганьковском кладбище. рожден...</p>
-                        <span class="comment-section">Ваганьковское кладбище, администрация (34)</span>
-                    </div>
-                    <div class="comment">
-                        <h4>Ольга Михайловна Кудымова</h4>
-                        <p>Как можно записаться на прием в администрацию Ваганьковского кладбища, чтобы переоформить регистрационное...</p>
-                        <span class="comment-section">Ваганьковское кладбище, администрация (34)</span>
-                    </div>
-                    <div class="comment">
-                        <h4>Ирина Фоменок</h4>
-                        <p>Здравствуйте, мне очень нужно найти моего дедушку Роженцова Алексея Вадимовича, умер в 2015...</p>
-                        <span class="comment-section">Ваганьковское кладбище, администрация (34)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Секции для каждого раздела меню -->
-        <section id="administration" class="content-section">
-            <div class="container">
-                <h2>Администрация Ваганьковского кладбища</h2>
-                <p>Администрация кладбища работает ежедневно и оказывает полный спектр услуг по обслуживанию территории и захоронений.</p>
-                <p>Режим работы администрации: с 9:00 до 17:00 в зимний период, с 9:00 до 19:00 в летний период.</p>
-            </div>
-        </section>
-
-        <section id="directions" class="content-section">
-            <div class="container">
-                <h2>Как доехать до Ваганьковского кладбища</h2>
-                <p><strong>Адрес:</strong> г. Москва, ул. Сергея Макеева, 15, 123100</p>
-                <p><strong>Ближайшие станции метро:</strong></p>
-                <ul>
-                    <li>Сокол (Сокольническая линия)</li>
-                    <li>Войковская (Замоскворецкая линия)</li>
-                </ul>
-                <p><strong>Общественный транспорт:</strong> автобусы и маршрутные такси до остановки "Ваганьковское кладбище"</p>
-            </div>
-        </section>
-
-        <section id="columbarium" class="content-section">
-            <div class="container">
-                <h2>Колумбарий</h2>
-                <p>На территории Ваганьковского кладбища действует колумбарий - специальное сооружение для хранения урн с прахом.</p>
-                <p>Доступны места в колумбарии открытого и закрытого типа.</p>
-            </div>
-        </section>
-
-        <section id="temple" class="content-section">
-            <div class="container">
-                <div class="section-with-image">
-                    <div class="section-text">
-                        <h2>Храм Воскресения Словущего</h2>
-                        <p>Главная достопримечательность кладбища - Храм Воскресения Словущего, построенный в 1924 году архитектором Григорьевым.</p>
-                        <p>Храм построен на месте небольшой церквушки, от которой осталась только ротонда.</p>
-                    </div>
-                    <div class="section-image">
-                        <img src="images/temple.svg" alt="Храм Воскресения Словущего">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="content-section">
-            <div class="container">
-                <h2>Услуги</h2>
-                <div class="services-list">
-                    <div id="excursions">
-                        <h3>Экскурсии по Ваганьковскому кладбищу</h3>
-                        <p>Организуются экскурсии по историческим местам кладбища с рассказом о знаменитых личностях.</p>
-                    </div>
-                    <div id="landscaping">
-                        <h3>Благоустройство</h3>
-                        <p>Услуги по благоустройству могил и территории кладбища.</p>
-                    </div>
-                    <div id="monuments">
-                        <h3>Памятники</h3>
-                        <p>Изготовление и установка памятников различных типов.</p>
-                    </div>
-                    <div id="prices">
-                        <h3>Стоимость места</h3>
-                        <p>Информация о стоимости мест в колумбарии и других услугах. Для получения точной информации обращайтесь в администрацию.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="granite-workshop" class="content-section">
-            <div class="container">
-                <div class="section-with-image">
-                    <div class="section-text">
-                        <h2>Гранитная мастерская</h2>
-                        <p>На территории кладбища работает гранитная мастерская, где можно заказать изготовление памятников и надгробий из различных материалов.</p>
-                        <p>Опытные мастера выполняют работы любой сложности: от простых табличек до сложных скульптурных композиций.</p>
-                    </div>
-                    <div class="section-image">
-                        <img src="images/granite.svg" alt="Гранитная мастерская">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="map" class="content-section">
-            <div class="container">
-                <div class="section-with-image">
-                    <div class="section-text">
-                        <h2>Схема участков</h2>
-                        <p>Схема участков Ваганьковского кладбища поможет найти нужную могилу или место захоронения.</p>
-                        <p>Для получения подробной схемы обращайтесь в администрацию кладбища.</p>
-                        <p>Территория разделена на пронумерованные участки с удобной системой навигации.</p>
-                    </div>
-                    <div class="section-image">
-                        <img src="images/map.svg" alt="Схема участков кладбища">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Специальные предложения -->
-        <section class="special-offers">
+        <section class="special-offers fade-in">
             <div class="container">
                 <h2>🎯 Специальные предложения</h2>
                 <div class="offers-grid">
-                    <div class="offer-card featured">
+                    <div class="offer-card featured slide-in-left">
                         <div class="offer-badge">Хит</div>
-                        <h3>Комплексное обслуживание</h3>
-                        <p>Полный уход за захоронением + памятник</p>
+                        <h3>🎁 Комплексное обслуживание</h3>
+                        <p>Полный уход за захоронением + памятник + AI-консультант</p>
                         <div class="offer-price">от 25 000 ₽</div>
                         <button class="cta-button primary" onclick="openModal('order-service', 'complex')">Заказать</button>
                     </div>
-                    <div class="offer-card">
+                    <div class="offer-card slide-in-right">
                         <div class="offer-badge discount">-20%</div>
-                        <h3>Памятник из гранита</h3>
-                        <p>Изготовление + установка + гравировка</p>
+                        <h3>🗿 Памятник из гранита</h3>
+                        <p>Изготовление + установка + гравировка + 3D визуализация</p>
                         <div class="offer-price">от 35 000 ₽</div>
                         <button class="cta-button primary" onclick="openModal('order-service', 'monument')">Заказать</button>
                     </div>
-                    <div class="offer-card">
-                        <h3>Место в колумбарии</h3>
-                        <p>Оформление документов + услуги</p>
+                    <div class="offer-card slide-in-left">
+                        <h3>🏛️ Место в колумбарии</h3>
+                        <p>Оформление документов + консультация + услуги</p>
                         <div class="offer-price">от 15 000 ₽</div>
                         <button class="cta-button primary" onclick="openModal('order-service', 'columbarium')">Узнать подробнее</button>
                     </div>
+                </div>
+                
+                <!-- AI помощник промо -->
+                <div class="ai-promo fade-in" style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 20px; backdrop-filter: blur(20px);">
+                    <h3 style="color: white; margin-bottom: 1rem;">🤖 Попробуйте наш AI-помощник!</h3>
+                    <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Получите персональные рекомендации по услугам и мгновенные ответы на вопросы</p>
+                    <button class="cta-button outline" onclick="window.cemeteryWebsite?.aiChatbot?.open()" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        🚀 Открыть AI-помощника
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Калькулятор стоимости -->
-        <section class="cost-calculator">
+        <section class="cost-calculator fade-in">
             <div class="container">
-                <h2>💰 Калькулятор стоимости услуг</h2>
+                <h2>💰 Умный калькулятор стоимости</h2>
                 <div class="calculator-content">
                     <div class="calculator-form">
                         <div class="form-group">
-                            <label>Тип услуги:</label>
+                            <label>🛠️ Тип услуги:</label>
                             <select id="serviceType" onchange="updateCalculator()">
                                 <option value="">Выберите услугу</option>
-                                <option value="monument">Памятник</option>
-                                <option value="columbarium">Место в колумбарии</option>
-                                <option value="maintenance">Уход за захоронением</option>
-                                <option value="landscaping">Благоустройство</option>
+                                <option value="monument">🗿 Памятник</option>
+                                <option value="columbarium">🏛️ Место в колумбарии</option>
+                                <option value="maintenance">🧹 Уход за захоронением</option>
+                                <option value="landscaping">🌿 Благоустройство</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Материал:</label>
+                            <label>🎨 Материал:</label>
                             <select id="material" onchange="updateCalculator()">
                                 <option value="">Выберите материал</option>
-                                <option value="granite">Гранит</option>
-                                <option value="marble">Мрамор</option>
-                                <option value="bronze">Бронза</option>
+                                <option value="granite">⚫ Гранит</option>
+                                <option value="marble">⚪ Мрамор</option>
+                                <option value="bronze">🟤 Бронза</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Размер:</label>
+                            <label>📏 Размер:</label>
                             <select id="size" onchange="updateCalculator()">
                                 <option value="">Выберите размер</option>
-                                <option value="small">Малый</option>
-                                <option value="medium">Средний</option>
-                                <option value="large">Большой</option>
+                                <option value="small">📦 Малый</option>
+                                <option value="medium">📦 Средний</option>
+                                <option value="large">📦 Большой</option>
                             </select>
                         </div>
                         <div class="calculator-result">
                             <div class="estimated-cost">
-                                <span>Примерная стоимость:</span>
+                                <span>💸 Примерная стоимость:</span>
                                 <strong id="calculatedPrice">Выберите параметры</strong>
                             </div>
                             <button class="cta-button primary" onclick="openModal('consultation')">
-                                Получить точный расчет
+                                📞 Получить точный расчет
                             </button>
                         </div>
                     </div>
@@ -331,41 +279,72 @@
         </section>
 
         <!-- Отзывы клиентов -->
-        <section class="reviews-section">
+        <section class="reviews-section fade-in">
             <div class="container">
                 <h2>⭐ Отзывы наших клиентов</h2>
                 <div class="reviews-grid">
-                    <div class="review-card">
+                    <div class="review-card slide-in-left">
                         <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                        <p>"Очень благодарна администрации за помощь в оформлении места. Все сделали быстро и качественно."</p>
+                        <p>"Очень благодарна администрации за помощь в оформлении места. AI-помощник сразу подсказал все необходимые документы. Все сделали быстро и качественно."</p>
                         <div class="review-author">— Елена Михайловна</div>
                     </div>
-                    <div class="review-card">
+                    <div class="review-card slide-in-right">
                         <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                        <p>"Заказывали памятник из гранита. Работа выполнена на высшем уровне, цены разумные."</p>
+                        <p>"Заказывали памятник из гранита. Работа выполнена на высшем уровне, цены разумные. Современный сайт с чат-ботом очень удобен!"</p>
                         <div class="review-author">— Игорь Петров</div>
                     </div>
-                    <div class="review-card">
+                    <div class="review-card slide-in-left">
                         <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                        <p>"Отличный сервис по уходу за захоронением. Всегда чисто и аккуратно."</p>
+                        <p>"Отличный сервис по уходу за захоронением. AI-консультант помог выбрать оптимальный пакет услуг. Всегда чисто и аккуратно."</p>
                         <div class="review-author">— Анна Сергеевна</div>
                     </div>
                 </div>
                 <div class="reviews-cta">
                     <button class="cta-button secondary" onclick="openModal('review')">
-                        Оставить отзыв
+                        ✍️ Оставить отзыв
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="comments-section fade-in">
+            <div class="container">
+                <h3>💬 Обращения посетителей</h3>
+                <div class="comments">
+                    <div class="comment slide-in-left">
+                        <h4>👤 Галина Арцт</h4>
+                        <p>Здравствуйте! Ищу могилу прадедушки Арцт Николая Федоровича на Ваганьковском кладбище. Рожден в 1889 году...</p>
+                        <span class="comment-section">📍 Ваганьковское кладбище, администрация (34)</span>
+                    </div>
+                    <div class="comment slide-in-right">
+                        <h4>👤 Ольга Михайловна Кудымова</h4>
+                        <p>Как можно записаться на прием в администрацию Ваганьковского кладбища, чтобы переоформить регистрационное...</p>
+                        <span class="comment-section">📍 Ваганьковское кладбище, администрация (34)</span>
+                    </div>
+                    <div class="comment slide-in-left">
+                        <h4>👤 Ирина Фоменок</h4>
+                        <p>Здравствуйте, мне очень нужно найти моего дедушку Роженцова Алексея Вадимовича, умер в 2015 году...</p>
+                        <span class="comment-section">📍 Ваганьковское кладбище, администрация (34)</span>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">🤖 Нужна помощь с поиском?</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Наш AI-помощник может помочь с поиском захоронений и оформлением документов</p>
+                    <button class="cta-button primary" onclick="window.cemeteryWebsite?.aiChatbot?.open()">
+                        🔍 Найти с помощью AI
                     </button>
                 </div>
             </div>
         </section>
 
         <!-- Быстрая связь -->
-        <section class="quick-contact">
+        <section class="quick-contact fade-in">
             <div class="container">
                 <div class="contact-banner">
                     <div class="contact-text">
-                        <h3>Нужна консультация? Мы поможем!</h3>
-                        <p>Наши специалисты ответят на все вопросы и помогут выбрать подходящие услуги</p>
+                        <h3>📞 Нужна консультация? Мы поможем!</h3>
+                        <p>Наши специалисты и AI-помощник ответят на все вопросы и помогут выбрать подходящие услуги</p>
                     </div>
                     <div class="contact-buttons">
                         <a href="tel:+74951234567" class="contact-btn phone">
@@ -374,22 +353,267 @@
                         <button class="contact-btn callback" onclick="openModal('callback')">
                             📲 Обратный звонок
                         </button>
+                        <button class="contact-btn" onclick="window.cemeteryWebsite?.aiChatbot?.open()" style="background: #9b59b6;">
+                            🤖 AI-Помощник
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacts" class="content-section">
+        <!-- Секции для каждого раздела меню -->
+        <section id="administration" class="content-section fade-in">
             <div class="container">
-                <h2>Контакты</h2>
+                <h2>🏢 Администрация Ваганьковского кладбища</h2>
+                <div class="section-with-image">
+                    <div class="section-text">
+                        <p>Администрация кладбища работает ежедневно и оказывает полный спектр услуг по обслуживанию территории и захоронений.</p>
+                        <p><strong>⏰ Режим работы администрации:</strong></p>
+                        <ul>
+                            <li>🌙 с 9:00 до 17:00 в зимний период</li>
+                            <li>🌞 с 9:00 до 19:00 в летний период</li>
+                        </ul>
+                        <p>🤖 <strong>Новинка:</strong> Теперь получить информацию можно через AI-помощника 24/7!</p>
+                        <button class="cta-button primary" onclick="window.cemeteryWebsite?.aiChatbot?.open()" style="margin-top: 1rem;">
+                            💬 Задать вопрос AI
+                        </button>
+                    </div>
+                    <div class="section-image">
+                        <img src="images/administration.svg" alt="Здание администрации" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="directions" class="content-section fade-in">
+            <div class="container">
+                <h2>🚌 Как доехать до Ваганьковского кладбища</h2>
+                <div class="section-with-image">
+                    <div class="section-text">
+                        <p><strong>📍 Адрес:</strong> г. Москва, ул. Сергея Макеева, 15, 123100</p>
+                        <p><strong>🚇 Ближайшие станции метро:</strong></p>
+                        <ul>
+                            <li>🔴 Сокол (Сокольническая линия)</li>
+                            <li>🟢 Войковская (Замоскворецкая линия)</li>
+                        </ul>
+                        <p><strong>🚌 Общественный транспорт:</strong> автобусы и маршрутные такси до остановки "Ваганьковское кладбище"</p>
+                        <div style="margin-top: 1.5rem;">
+                            <button class="cta-button secondary" onclick="window.open('https://yandex.ru/maps/?text=Ваганьковское кладбище', '_blank')">
+                                🗺️ Открыть в Яндекс.Картах
+                            </button>
+                        </div>
+                    </div>
+                    <div class="section-image">
+                        <img src="images/directions.svg" alt="Схема проезда" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="columbarium" class="content-section fade-in">
+            <div class="container">
+                <h2>🏛️ Колумбарий</h2>
+                <div class="section-with-image">
+                    <div class="section-text">
+                        <p>На территории Ваганьковского кладбища действует современный колумбарий - специальное сооружение для хранения урн с прахом.</p>
+                        <p><strong>📋 Доступные варианты:</strong></p>
+                        <ul>
+                            <li>🏛️ Колумбарий открытого типа</li>
+                            <li>🔒 Колумбарий закрытого типа</li>
+                            <li>🌹 Индивидуальные ниши с оформлением</li>
+                        </ul>
+                        <p>💡 AI-помощник поможет выбрать оптимальный вариант и рассчитать стоимость.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <button class="cta-button primary" onclick="openModal('order-service', 'columbarium')">
+                                📋 Заказать место
+                            </button>
+                            <button class="cta-button secondary" onclick="window.cemeteryWebsite?.aiChatbot?.open()">
+                                🤖 Консультация AI
+                            </button>
+                        </div>
+                    </div>
+                    <div class="section-image">
+                        <img src="images/columbarium.svg" alt="Колумбарий" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="temple" class="content-section fade-in">
+            <div class="container">
+                <div class="section-with-image">
+                    <div class="section-text">
+                        <h2>⛪ Храм Воскресения Словущего</h2>
+                        <p>Главная достопримечательность кладбища - Храм Воскресения Словущего, построенный в 1924 году архитектором Григорьевым.</p>
+                        <p>Храм построен на месте небольшой церквушки, от которой осталась только ротонда.</p>
+                        <p><strong>🕊️ В храме проводятся:</strong></p>
+                        <ul>
+                            <li>⛪ Панихиды и отпевания</li>
+                            <li>🕯️ Поминальные службы</li>
+                            <li>📿 Молебны об упокоении</li>
+                        </ul>
+                        <p>🤖 Запись на службы теперь можно оформить через AI-помощника.</p>
+                        <button class="cta-button primary" onclick="window.cemeteryWebsite?.aiChatbot?.open()" style="margin-top: 1rem;">
+                            📅 Записаться через AI
+                        </button>
+                    </div>
+                    <div class="section-image">
+                        <img src="images/temple.svg" alt="Храм Воскресения Словущего" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="content-section fade-in">
+            <div class="container">
+                <h2>🛠️ Услуги</h2>
+                <div class="services-list">
+                    <div id="excursions">
+                        <h3>🚶 Экскурсии по Ваганьковскому кладбищу</h3>
+                        <p>Организуются познавательные экскурсии по историческим местам кладбища с рассказом о знаменитых личностях и архитектурных памятниках.</p>
+                        <button class="cta-button secondary" onclick="openModal('order-service', 'excursion')" style="margin-top: 1rem;">
+                            🎫 Записаться на экскурсию
+                        </button>
+                    </div>
+                    <div id="landscaping">
+                        <h3>🌿 Благоустройство</h3>
+                        <p>Профессиональные услуги по благоустройству могил и территории кладбища. Озеленение, уборка, установка ограждений.</p>
+                        <button class="cta-button secondary" onclick="openModal('order-service', 'landscaping')" style="margin-top: 1rem;">
+                            🌱 Заказать благоустройство
+                        </button>
+                    </div>
+                    <div id="monuments">
+                        <h3>🗿 Памятники</h3>
+                        <p>Изготовление и установка памятников различных типов: гранитные, мраморные, бронзовые. 3D-моделирование и персональный дизайн.</p>
+                        <button class="cta-button secondary" onclick="openModal('order-service', 'monument')" style="margin-top: 1rem;">
+                            🎨 Заказать памятник
+                        </button>
+                    </div>
+                    <div id="prices">
+                        <h3>💰 Стоимость места</h3>
+                        <p>Актуальная информация о стоимости мест в колумбарии и других услугах. AI-калькулятор поможет рассчитать точную стоимость.</p>
+                        <button class="cta-button secondary" onclick="updateCalculator()" style="margin-top: 1rem;">
+                            🧮 Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(52, 152, 219, 0.1); border-radius: 15px; border: 1px solid rgba(52, 152, 219, 0.2);">
+                    <h4 style="color: var(--info-color); margin-bottom: 1rem;">🤖 Не знаете, какая услуга нужна?</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">AI-помощник проанализирует ваши потребности и предложит оптимальное решение</p>
+                    <button class="cta-button primary" onclick="window.cemeteryWebsite?.aiChatbot?.open()">
+                        💡 Получить рекомендации AI
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="granite-workshop" class="content-section fade-in">
+            <div class="container">
+                <div class="section-with-image">
+                    <div class="section-text">
+                        <h2>⚒️ Гранитная мастерская</h2>
+                        <p>На территории кладбища работает современная гранитная мастерская, где можно заказать изготовление памятников и надгробий из различных материалов.</p>
+                        <p><strong>🎨 Наши возможности:</strong></p>
+                        <ul>
+                            <li>⚫ Работа с гранитом любых пород</li>
+                            <li>⚪ Художественная обработка мрамора</li>
+                            <li>🟤 Литье из бронзы</li>
+                            <li>💎 3D-моделирование и визуализация</li>
+                            <li>✍️ Художественная гравировка</li>
+                        </ul>
+                        <p>Опытные мастера выполняют работы любой сложности: от простых табличек до сложных скульптурных композиций.</p>
+                        <p>🤖 AI-помощник поможет выбрать дизайн и материал, а также рассчитает стоимость работ.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <button class="cta-button primary" onclick="openModal('order-service', 'monument')">
+                                🎨 Заказать памятник
+                            </button>
+                            <button class="cta-button secondary" onclick="window.cemeteryWebsite?.aiChatbot?.open()">
+                                🤖 Консультация по дизайну
+                            </button>
+                        </div>
+                    </div>
+                    <div class="section-image">
+                        <img src="images/granite.svg" alt="Гранитная мастерская" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="content-section fade-in">
+            <div class="container">
+                <div class="section-with-image">
+                    <div class="section-text">
+                        <h2>🗺️ Схема участков</h2>
+                        <p>Интерактивная схема участков Ваганьковского кладбища поможет найти нужную могилу или место захоронения.</p>
+                        <p><strong>🔍 Возможности поиска:</strong></p>
+                        <ul>
+                            <li>📍 Поиск по номеру участка</li>
+                            <li>👤 Поиск по фамилии покойного</li>
+                            <li>📅 Поиск по дате захоронения</li>
+                            <li>🤖 AI-поиск с помощью голосовых команд</li>
+                        </ul>
+                        <p>Для получения подробной схемы обращайтесь в администрацию кладбища или воспользуйтесь AI-помощником.</p>
+                        <p>Территория разделена на пронумерованные участки с удобной системой навигации и QR-кодами для быстрого доступа к информации.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <button class="cta-button primary" onclick="window.cemeteryWebsite?.aiChatbot?.open()">
+                                🔍 Найти захоронение с AI
+                            </button>
+                            <button class="cta-button secondary" onclick="openModal('consultation')">
+                                📞 Запросить схему
+                            </button>
+                        </div>
+                    </div>
+                    <div class="section-image">
+                        <img src="images/map.svg" alt="Схема участков кладбища" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="content-section fade-in">
+            <div class="container">
+                <h2>📞 Контакты</h2>
                 <div class="contact-info">
-                    <p><strong>Адрес:</strong> г. Москва, ул. Сергея Макеева, 15, 123100</p>
-                    <p><strong>Режим работы:</strong></p>
-                    <ul>
-                        <li>Май-октябрь: 9:00 - 19:00</li>
-                        <li>Октябрь-апрель: 9:00 - 17:00</li>
-                    </ul>
-                    <p><strong>Время проведения захоронений:</strong> 9:00 - 15:00 ежедневно</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">                        
+                        <div>
+                            <p><strong>📍 Адрес:</strong> г. Москва, ул. Сергея Макеева, 15, 123100</p>
+                            <p><strong>⏰ Режим работы:</strong></p>
+                            <ul>
+                                <li>🌞 Май-октябрь: 9:00 - 19:00</li>
+                                <li>🌙 Октябрь-апрель: 9:00 - 17:00</li>
+                            </ul>
+                            <p><strong>⚰️ Время проведения захоронений:</strong> 9:00 - 15:00 ежедневно</p>
+                            <p><strong>📞 Телефон:</strong> +7 (495) 123-45-67</p>
+                            
+                            <div style="margin-top: 2rem;">
+                                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">🤖 Современное обслуживание</h4>
+                                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Наш AI-помощник работает 24/7 и может:</p>
+                                <ul style="color: var(--text-secondary);">
+                                    <li>✅ Ответить на любые вопросы</li>
+                                    <li>✅ Рассчитать стоимость услуг</li>
+                                    <li>✅ Записать на консультацию</li>
+                                    <li>✅ Помочь с выбором памятника</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <img src="images/contacts.svg" alt="Контактная информация" loading="lazy" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+                            
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <button class="cta-button primary" onclick="window.cemeteryWebsite?.aiChatbot?.open()">
+                                    🤖 Задать вопрос AI-помощнику
+                                </button>
+                                <button class="cta-button secondary" onclick="openModal('consultation')">
+                                    📞 Заказать консультацию
+                                </button>
+                                <a href="tel:+74951234567" class="cta-button outline">
+                                    📱 Позвонить сейчас
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -398,12 +622,23 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>Сайт не является официальным. Деятельность сайта «Ваганьковское кладбище» носит информационный характер и направлена на распространение информации о работе сторонних организаций, ритуальных служб и администрации кладбища в сети Интернет. <a href="#privacy">Политика конфиденциальности</a></p>
-                <p>© 2025 Ваганьковское кладбище.</p>
+                <p>🌐 Сайт не является официальным. Деятельность сайта «Ваганьковское кладбище» носит информационный характер и направлена на распространение информации о работе сторонних организаций, ритуальных служб и администрации кладбища в сети Интернет. <a href="#privacy">Политика конфиденциальности</a></p>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: 2rem 0; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <div>
+                        <h4 style="color: white; margin-bottom: 0.5rem;">🤖 Powered by AI</h4>
+                        <p style="margin: 0; opacity: 0.8;">Умный помощник для лучшего обслуживания</p>
+                    </div>
+                    <button class="cta-button outline" onclick="window.cemeteryWebsite?.aiChatbot?.open()" style="margin: 0;">
+                        🚀 Попробовать AI
+                    </button>
+                </div>
+                
+                <p>© 2025 Ваганьковское кладбище. Все права защищены.</p>
                 <div class="cookie-notice">
-                    <p>Сайт использует cookie. Вы можете отказаться от использования cookie, изменив настройки браузера. Используя сайт, вы соглашаетесь на обработку персональных данных на условиях политики.</p>
-                    <button onclick="acceptCookies()">Принять</button>
-                    <button onclick="closeCookieNotice()">×</button>
+                    <p>🍪 Сайт использует cookie и AI-аналитику для улучшения качества обслуживания. Вы можете отказаться от использования cookie, изменив настройки браузера. Используя сайт, вы соглашаетесь на обработку персональных данных на условиях политики.</p>
+                    <button onclick="acceptCookies()">✅ Принять</button>
+                    <button onclick="closeCookieNotice()">❌</button>
                 </div>
             </div>
         </div>
@@ -425,7 +660,7 @@
         <!-- Форма консультации -->
         <div id="consultation-template">
             <h3>📞 Бесплатная консультация</h3>
-            <p>Оставьте свои контакты, и мы свяжемся с вами в течение 15 минут</p>
+            <p>Оставьте свои контакты, и мы свяжемся с вами в течение 15 минут. Также вы можете воспользоваться нашим AI-помощником для мгновенной консультации!</p>
             <form class="contact-form" onsubmit="submitForm(event, 'consultation')">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Ваше имя *" required>
@@ -443,7 +678,10 @@
                     </label>
                 </div>
                 <button type="submit" class="cta-button primary full-width">
-                    Получить консультацию
+                    📞 Получить консультацию
+                </button>
+                <button type="button" class="cta-button secondary full-width" onclick="closeModal(); window.cemeteryWebsite?.aiChatbot?.open();" style="margin-top: 1rem;">
+                    🤖 Или спросить AI-помощника
                 </button>
             </form>
         </div>
@@ -469,7 +707,7 @@
                     </label>
                 </div>
                 <button type="submit" class="cta-button primary full-width">
-                    Заказать звонок
+                    📲 Заказать звонок
                 </button>
             </form>
         </div>
@@ -477,7 +715,7 @@
         <!-- Форма заказа услуги -->
         <div id="order-service-template">
             <h3>📋 Заказать услугу</h3>
-            <p>Оставьте заявку, и мы подготовим индивидуальное предложение</p>
+            <p>Оставьте заявку, и мы подготовим индивидуальное предложение с помощью AI-анализа ваших потребностей</p>
             <form class="contact-form" onsubmit="submitForm(event, 'order-service')">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Ваше имя *" required>
@@ -491,15 +729,16 @@
                 <div class="form-group">
                     <select name="service" required>
                         <option value="">Выберите услугу *</option>
-                        <option value="complex">Комплексное обслуживание</option>
-                        <option value="monument">Памятник из гранита</option>
-                        <option value="columbarium">Место в колумбарии</option>
-                        <option value="maintenance">Уход за захоронением</option>
-                        <option value="landscaping">Благоустройство</option>
+                        <option value="complex">🎁 Комплексное обслуживание</option>
+                        <option value="monument">🗿 Памятник из гранита</option>
+                        <option value="columbarium">🏛️ Место в колумбарии</option>
+                        <option value="maintenance">🧹 Уход за захоронением</option>
+                        <option value="landscaping">🌿 Благоустройство</option>
+                        <option value="excursion">🚶 Экскурсия</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="details" placeholder="Дополнительные пожелания" rows="3"></textarea>
+                    <textarea name="details" placeholder="Дополнительные пожелания или вопросы" rows="3"></textarea>
                 </div>
                 <div class="form-group checkbox">
                     <label>
@@ -508,7 +747,10 @@
                     </label>
                 </div>
                 <button type="submit" class="cta-button primary full-width">
-                    Отправить заявку
+                    📋 Отправить заявку
+                </button>
+                <button type="button" class="cta-button secondary full-width" onclick="closeModal(); window.cemeteryWebsite?.aiChatbot?.open();" style="margin-top: 1rem;">
+                    🤖 Получить консультацию AI
                 </button>
             </form>
         </div>
@@ -516,7 +758,7 @@
         <!-- Форма отзыва -->
         <div id="review-template">
             <h3>⭐ Оставить отзыв</h3>
-            <p>Поделитесь своим опытом сотрудничества с нами</p>
+            <p>Поделитесь своим опытом сотрудничества с нами. Ваше мнение поможет нам стать лучше!</p>
             <form class="contact-form" onsubmit="submitForm(event, 'review')">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Ваше имя *" required>
@@ -525,15 +767,15 @@
                     <label>Оценка:</label>
                     <div class="rating-input">
                         <input type="radio" name="rating" value="5" id="star5" required>
-                        <label for="star5">⭐⭐⭐⭐⭐</label>
+                        <label for="star5">⭐⭐⭐⭐⭐ Отлично</label>
                         <input type="radio" name="rating" value="4" id="star4">
-                        <label for="star4">⭐⭐⭐⭐</label>
+                        <label for="star4">⭐⭐⭐⭐ Хорошо</label>
                         <input type="radio" name="rating" value="3" id="star3">
-                        <label for="star3">⭐⭐⭐</label>
+                        <label for="star3">⭐⭐⭐ Удовлетворительно</label>
                         <input type="radio" name="rating" value="2" id="star2">
-                        <label for="star2">⭐⭐</label>
+                        <label for="star2">⭐⭐ Плохо</label>
                         <input type="radio" name="rating" value="1" id="star1">
-                        <label for="star1">⭐</label>
+                        <label for="star1">⭐ Очень плохо</label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -546,38 +788,96 @@
                     </label>
                 </div>
                 <button type="submit" class="cta-button primary full-width">
-                    Отправить отзыв
+                    ✍️ Отправить отзыв
                 </button>
             </form>
         </div>
 
-        <!-- Калькулятор (расширенный) -->
+        <!-- Расширенный калькулятор -->
         <div id="calculator-template">
-            <h3>💰 Калькулятор стоимости</h3>
-            <p>Получите предварительный расчет стоимости услуг</p>
+            <h3>💰 Умный калькулятор стоимости</h3>
+            <p>Получите предварительный расчет стоимости услуг с помощью AI-анализа ваших потребностей</p>
             <div class="calculator-detailed">
-                <!-- Контент калькулятора -->
+                <p style="text-align: center; color: var(--text-secondary);">🤖 Для более точного расчета используйте наш AI-помощник, который учтет все ваши пожелания и особенности.</p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="cta-button primary" onclick="closeModal(); window.cemeteryWebsite?.aiChatbot?.open();">
+                        🚀 Открыть AI-калькулятор
+                    </button>
+                </div>
             </div>
         </div>
 
     </div>
 
     <!-- Всплывающий виджет -->
-    <div class="floating-widget" id="floatingWidget">
+    <div class="floating-widget" id="floatingWidget" style="display: none;">
         <div class="widget-content">
             <div class="widget-header">
                 <span>💬 Нужна помощь?</span>
                 <button class="widget-close" onclick="closeFloatingWidget()">&times;</button>
             </div>
             <div class="widget-body">
-                <p>Получите бесплатную консультацию прямо сейчас!</p>
-                <button class="cta-button primary small" onclick="openModal('consultation')">
-                    Связаться с нами
+                <p>Получите бесплатную консультацию от AI-помощника или наших специалистов!</p>
+                <button class="cta-button primary small" onclick="closeFloatingWidget(); window.cemeteryWebsite?.aiChatbot?.open();">
+                    🤖 AI-Помощник
+                </button>
+                <button class="cta-button secondary small" onclick="closeFloatingWidget(); openModal('consultation');" style="margin-top: 0.5rem;">
+                    📞 Живой специалист
                 </button>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    
+    <!-- Дополнительный CSS для анимаций -->
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) {
+            .section-with-image {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </body>
-</html> 
+</html>
